@@ -28,7 +28,7 @@ console = Console()
 # ---------------------------
 def print_startup_notice():
     console.print("\n[bold red]NOTICE:[/bold red] By starting Wscab (Web Scab), you acknowledge that we may investigate the use of this tool if it is used in an unethical manner.")
-    console.print("Please review the usage policy at [underline]www.jconi.software/use[/underline].\n")
+    console.print("Please review the usage policy at [underline]www.wsab.software/use[/underline].\n")
 
 
 # ---------------------------
@@ -36,7 +36,7 @@ def print_startup_notice():
 # ---------------------------
 def print_live_developer_location():
     # Hard-coded live development location.
-    developer_location = "Kampala, Uganda"
+    developer_location = "..."
     console.print("[bold cyan]Live Developed Loc: is [underline]" + developer_location + "[/underline][/bold cyan]\n")
 
 
@@ -47,7 +47,7 @@ def prompt_options():
     console.print("Choose an option:")
     console.print("  [bold yellow]y[/bold yellow] - Start the tool")
     console.print("  [bold yellow]n[/bold yellow] - Exit the tool")
-    console.print("  [bold yellow]d[/bold yellow] - Debug Matrix (simulate matrix effect and deny service)")
+    console.print("  [bold yellow]d[/bold yellow] - ...)")
     choice = input("Enter option (y/n/d): ").strip().lower()
     if choice == "y":
         return True
@@ -64,7 +64,7 @@ def prompt_options():
 # Exit with Animated Bye-Bye Message
 # ---------------------------
 def exit_with_bye():
-    bye_message = "Bye-Bye"
+    bye_message = "Bye-Bye! Ready when you are"
     console.print("\n", end="")
     for char in bye_message:
         sys.stdout.write(char)
@@ -78,7 +78,7 @@ def exit_with_bye():
 # Matrix Animation then Deny Service
 # ---------------------------
 def run_matrix_animation():
-    console.print("[bold green]Starting matrix effect...[/bold green]")
+    console.print("[bold green]Starting Xmatrix...[/bold green]")
     start_time = time.time()
     while time.time() - start_time < 3:
         line = ''.join(random.choice("01") for _ in range(80))
