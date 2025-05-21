@@ -47,6 +47,6 @@ Run Webscab by specifying the target URL:
 ```bash
 ./wscab.py <target_url>
 ```
-After, then run ./scan_webpages_wscab.py tool to get target page assets, including: html, CSS, JS
+After, then run ./scan_webpages_wscab.py tool to get target page assets, including: HTML, CSS, JS
 ```
 ./scan_webpages_wscab.py https://example.com/
