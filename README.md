@@ -14,7 +14,7 @@ Webscab is a comprehensive and modular web security scanning tool designed to de
 - [Installation](#installation)
   - [Linux / Unix](#linux--unix)
   - [Windows (PowerShell)](#windows-powershell)
-  - [Android / Termux](#android--termux)
+  - [Android / Termux](https://webscab.com)
   - [Other Mobile Linux Devices](#other-mobile-linux-devices)
 - [Community](#community)
 - [Contribution](#contribution)
