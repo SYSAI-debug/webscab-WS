@@ -11,7 +11,7 @@ from rich import box
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Advanced Curl Python Script: Make HTTP requests with enhanced output."
+        description="..."
     )
     parser.add_argument("url", help="URL to request")
     parser.add_argument(

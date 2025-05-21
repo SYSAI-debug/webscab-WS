@@ -13,18 +13,18 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
-# Rich for animated styled terminal output.
+# Terminal output.
 from rich.console import Console
 from rich.table import Table
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich import box
 
-# Initialize Rich Console.
+# Initialize Console.
 console = Console()
 
 
 # ---------------------------
-# NOTICE MESSAGE (Wscab disclaimer)
+# NOTICE (Wscab disclaimer)
 # ---------------------------
 def print_startup_notice():
     console.print("\n[bold red]NOTICE:[/bold red] By starting Wscab (Web Scab), you acknowledge that we may investigate the use of this tool if it is used in an unethical manner.")
@@ -32,7 +32,7 @@ def print_startup_notice():
 
 
 # ---------------------------
-# LIVE DEVELOPER LOCATION DISPLAY
+# DISPLAY HIDDEN
 # ---------------------------
 def print_live_developer_location():
     # Hard-coded live development location.
@@ -41,7 +41,7 @@ def print_live_developer_location():
 
 
 # ---------------------------
-# Pre-Tool Prompt Options
+# Prompt Options
 # ---------------------------
 def prompt_options():
     console.print("Choose an option:")
@@ -61,7 +61,7 @@ def prompt_options():
 
 
 # ---------------------------
-# Exit with Animated Bye-Bye Message
+# Exit
 # ---------------------------
 def exit_with_bye():
     bye_message = "Bye-Bye! Ready when you are"
@@ -75,7 +75,7 @@ def exit_with_bye():
 
 
 # ---------------------------
-# Matrix Animation then Deny Service
+# Deny Service
 # ---------------------------
 def run_matrix_animation():
     console.print("[bold green]Starting Xmatrix...[/bold green]")
@@ -89,7 +89,7 @@ def run_matrix_animation():
 
 
 # ---------------------------
-# Basic Fetch Function with Retry
+# Retry
 # ---------------------------
 def fetch_url(url, method='GET', headers=None, retries=3, timeout=5):
     session = requests.Session()
@@ -245,7 +245,7 @@ def scan_common_files(base_url, headers):
 
 
 # ---------------------------
-# Advanced Code Analysis (syntax highlighting)
+# Code Analysis (syntax highlighting)
 # ---------------------------
 def display_file_with_colors(url, file_extension):
     console.print(f"\n[bold blue]--- Advanced Code Analysis for {url} ---[/bold blue]")
@@ -372,7 +372,7 @@ def fingerprint_cms(html):
 
 
 # ---------------------------
-# Advanced Vulnerability & Static Code Analysis
+# M9 Vulnerability & Static Code Analysis
 # ---------------------------
 def static_code_analysis(content, file_type):
     warnings = []
@@ -387,7 +387,7 @@ def static_code_analysis(content, file_type):
 
 
 # ---------------------------
-# Advanced Misconfiguration Lookup
+# M9 misconfiguration Lookup
 # ---------------------------
 def lookup_misconfigurations(headers):
     misconfigs = []
@@ -438,7 +438,7 @@ def heuristic_analysis(results, misconfigs):
 
 
 # ---------------------------
-# Intelligence Threat Scanning (local heuristic)
+# Intelligence Threat Scanning (9-local heuristic)
 # ---------------------------
 def intelligence_threat_scan(results):
     threat_items = []
@@ -452,7 +452,7 @@ def intelligence_threat_scan(results):
 
 
 # ---------------------------
-# Persistent Storage & Reporting
+# Reporting
 # ---------------------------
 def store_results_to_db(results, db_filename='scan_results.db'):
     conn = sqlite3.connect(db_filename)
@@ -628,7 +628,7 @@ def main():
     ssl_info = analyze_ssl_certificate(args.url)
     console.print(f"\n[bold underline blue]SSL/TLS Certificate Analysis:[/bold underline blue] {ssl_info}")
 
-    # Advanced Analysis: CMS Fingerprinting, Vulnerability Scan, SEO, Malicious Content.
+    # Analysis: CMS Fingerprinting, Vulnerability Scan, SEO, Malicious Content.
     base_response = fetch_url(args.url, headers=headers)
     if base_response:
         base_html = base_response.text
@@ -661,7 +661,7 @@ def main():
         else:
             console.print("\n[bold green]No malicious content detected.[/bold green]")
 
-    # Advanced Analysis: Directory Bruteforcing.
+    # Analysis: Directory Bruteforcing.
     dir_results = directory_bruteforce(args.url, headers)
     dir_table = Table(title="Directory Bruteforcing Results", box=box.SIMPLE)
     dir_table.add_column("Directory", style="cyan", no_wrap=True)
@@ -671,7 +671,7 @@ def main():
     console.print("\n")
     console.print(dir_table)
 
-    # Advanced Code Analysis for Detected Assets.
+    # ASB Code Analysis for Detected Assets.
     console.print("\n[bold underline blue]Advanced Code Analysis for Detected Assets[/bold underline blue]")
     for page, data in results.items():
         assets = data.get("assets", {})
@@ -685,7 +685,7 @@ def main():
                     if ext.lower() in ['css', 'php', 'js', 'html', 'htm', 'hml', 'tsx']:
                         display_file_with_colors(asset_url, ext)
 
-    # Advanced Misconfiguration Lookup.
+    # M9 Misconfiguration Lookup.
     misconfigs = lookup_misconfigurations(headers_data)
     console.print("\n[bold underline blue]Misconfiguration Lookup[/bold underline blue]")
     if misconfigs:
@@ -701,7 +701,7 @@ def main():
     for detail in heuristic["details"]:
         console.print(f"- {detail}")
 
-    # Intelligence Threat Scanning (local heuristics).
+    # Intelligence Threat Scanning (9-local heuristics).
     threat_items = intelligence_threat_scan(results)
     console.print("\n[bold underline blue]Intelligence Threat Scan Results[/bold underline blue]")
     if threat_items:
@@ -714,7 +714,7 @@ def main():
     else:
         console.print("[bold green]No intelligence-based threats detected.[/bold green]")
 
-    # Persistent Storage & Reporting.
+    # Reporting.
     store_results_to_db(results, db_filename="scan_results.db")
     generate_html_report(db_filename="scan_results.db", output_file="report.html")
 

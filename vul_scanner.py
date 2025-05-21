@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 """
-VulnScan Tool - A basic vulnerability scanner that inspects an IP address
-for open ports and attempts to grab service banners.
+...
 ---------------------------------------------------------------------
-Note:
-- This tool is intended for use on systems where you have explicit authorization.
-- To make this tool harder to modify when distributed:
-    • Consider compiling it using PyInstaller (e.g., `pyinstaller --onefile vuln_scan.py`)
-    • Consider obfuscating the code using tools like PyArmor before distribution.
+...
 ---------------------------------------------------------------------
 """
 
