@@ -1,6 +1,10 @@
-# webscab-
+# 1CodeTime 
+_**Curious about 1CodeTime?**_
+Well, 1CodeTime is a personal sector that dedicated to crafting powerful auditing tools that safeguard web applications and networks. With a strong foundation in automation.
 
-**Advanced Web Security Auditing Tool**
+**Know more about Webscab (Web Scab) from 1CodeTime**
+
+_**Advanced Web Security Auditing Tool**_
 
 Webscab is a comprehensive and modular web security scanning tool designed to detect vulnerabilities, extract web assets, and perform in-depth analysis to safeguard your web applications. Built with flexibility and ethical usage in mind, Webscab is engineered for professionals who demand advanced capabilities across multiple platforms.
 
